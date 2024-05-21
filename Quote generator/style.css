@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e0e0e0;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 605px;
+    border-radius: 15px;
+    padding: 30px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    margin-bottom: 10px;
+    margin-top: 70px;
+}
+
+.wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    animation: colorChange 5s infinite ease-in-out;
+}
+@keyframes colorChange {
+    0% {
+        color: #434343; /* Initial color */
+    }
+    25% {
+        color: #646363; /* Intermediate color */
+    }
+    50% {
+        color: #8a8a8a; /* Intermediate color */
+    }
+    100% {
+        color: #adaaaa; /* Final color */
+    }
+}
+.content {
+    margin: 35px 0;
+}
+
+.quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i {
+    font-size: 15px;
+    color: #646363;
+}
+
+.quote-area i:first-child {
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.quote-area .quote {
+    font-size: 22px;
+    text-align: center;
+    color: #434343;
+    word-wrap: break-word;
+}
+
+.author {
+    display: flex;
+    font-size: 18px;
+    font-style: italic;
+    color: #434343;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.author span:first-child {
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+
+.buttons {
+    border-top: 1px solid #434343;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    margin-right: auto;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    cursor: pointer;
+    color: #434343;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #6d6b6b;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    color: #fff;
+    background: #878787;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: #434343;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 15px #717171, -5px -5px 15px #ffffff;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+button:hover {
+    color: #fff;
+    background: #878787;
+}
+
+button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Styles for the tooltip */
+.tooltip {
+    position: absolute;
+    background-color: #878787;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px 15px #717171, -5px -5px 15px #ffffff;
+    font-size: 12px;
+}
+
+.tooltip .tooltip-text {
+    margin-bottom: 5px;
+}
+
+.tooltip .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #878787 transparent;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Styles for the media icons */
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a {
+    position: relative;
+    color: #111;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-top: 132px;
+    margin-bottom: 10px;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    ul li {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .media-icons a {
+        font-size: 16px;
+    }
+}
+footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 35px;
+    color: #646363;
+    opacity: 0.5;
+}
